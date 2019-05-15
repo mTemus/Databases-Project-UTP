@@ -1,0 +1,7 @@
+SELECT uczniowie.imiê, uczniowie.nazwisko, przedmiot.nazwa AS 'przedmiot', AVG(dziennik_ocen.ocena) AS 'œrednia'
+FROM uczniowie
+INNER JOIN dziennik_ocen ON uczniowie.id_ucznia = dziennik_ocen.id_ucznia
+INNER JOIN przedmiot ON dziennik_ocen.id_przedmiotu = przedmiot.id_przedmiotu
+GROUP BY dziennik_ocen.id_ucznia, dziennik_ocen.id_przedmiotu
+HAVING AVG(dziennik_ocen.ocena) >= 4.5
+ORDER BY uczniowie.nazwisko ASC;

@@ -1,0 +1,5 @@
+CREATE TABLE `przewodnicz¹cy` (
+  `id_ucznia` int(11) NOT NULL,
+  KEY `prze_uczn_idx` (`id_ucznia`),
+  CONSTRAINT `prze_uczn` FOREIGN KEY (`id_ucznia`) REFERENCES `uczniowie` (`id_ucznia`)
+)

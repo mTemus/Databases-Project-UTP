@@ -1,0 +1,22 @@
+DROP PROCEDURE IF EXISTS szkola.etat_pol;
+DELIMITER $$
+CREATE PROCEDURE etat_pol()
+	UPDATE pracownicy
+	SET etat = "pó³"
+    WHERE pensja < 1700
+
+$$
+DELIMITER ;
+
+CALL etat_pol;
+
+DROP PROCEDURE IF EXISTS szkola.etat_pelen;
+DELIMITER $$
+CREATE PROCEDURE etat_pelen()
+	UPDATE pracownicy
+	SET etat = "pe³en"
+    WHERE pensja >= 1700
+$$
+DELIMITER ;
+
+CALL etat_pelen;

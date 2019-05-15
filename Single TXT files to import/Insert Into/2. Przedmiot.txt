@@ -1,0 +1,1 @@
+INSERT INTO `przedmiot` VALUES (1,'jêzyk_polski',12),(2,'jêzyk_angielski',4),(3,'jêzyk_niemiecki',2),(4,'matematyka',10),(5,'przyroda',2),(6,'technika',2),(7,'WF',3),(8,'godzina_wychowawcza',1),(9,'historia',2),(10,'geografia',2),(11,'plastyka',2),(12,'muzyka',2),(13,'WOS',4),(14,'WD¯',2),(15,'informatyka',2);

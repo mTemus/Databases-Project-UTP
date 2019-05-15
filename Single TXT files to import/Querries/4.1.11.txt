@@ -1,0 +1,4 @@
+SELECT imiê, nazwisko, id_klasy AS numer_klasy
+FROM uczniowie 
+INNER JOIN skarbnik ON uczniowie.id_ucznia = skarbnik.id_ucznia
+ORDER BY id_klasy ASC;

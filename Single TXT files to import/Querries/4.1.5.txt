@@ -1,0 +1,5 @@
+SELECT uczniowie.imiê, uczniowie.nazwisko, przedmiot.nazwa, AVG(dziennik_ocen.ocena) AS 'œrednia'
+FROM uczniowie
+INNER JOIN dziennik_ocen ON uczniowie.id_ucznia = dziennik_ocen.id_ucznia
+INNER JOIN przedmiot ON dziennik_ocen.id_przedmiotu = przedmiot.id_przedmiotu
+GROUP BY dziennik_ocen.id_ucznia, dziennik_ocen.id_przedmiotu

@@ -1,0 +1,13 @@
+CREATE TABLE `pracownicy` (
+  `id_pracownika` int(11) NOT NULL AUTO_INCREMENT,
+  `id_prze³o¿onego` int(11) DEFAULT NULL,
+  `imiê` varchar(45) NOT NULL,
+  `nazwisko` varchar(45) NOT NULL,
+  `stanowisko` varchar(45) NOT NULL,
+  `pensja` int(11) NOT NULL,
+  `etat` varchar(45) NOT NULL,
+  PRIMARY KEY (`id_pracownika`),
+  UNIQUE KEY `id_pracownika_UNIQUE` (`id_pracownika`),
+  KEY `prac_prac_idx` (`id_prze³o¿onego`),
+  CONSTRAINT `prac_prac` FOREIGN KEY (`id_prze³o¿onego`) REFERENCES `pracownicy` (`id_pracownika`)
+)

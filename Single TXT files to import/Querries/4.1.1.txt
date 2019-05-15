@@ -1,0 +1,7 @@
+SELECT uczniowie.nazwisko AS 'nazwisko ucznia', uczniowie.imiê AS 'imiê ucznia', klasa.id_klasy AS 'numer klasy', pracownicy.imiê AS 'imiê wychowawcy', pracownicy.nazwisko AS 'nazwisko wychowawcy'
+FROM pracownicy 
+INNER JOIN nauczyciele ON pracownicy.id_pracownika = nauczyciele.id_pracownika
+JOIN wychowawca ON nauczyciele.id_nauczyciela = wychowawca.id_nauczyciela
+JOIN klasa ON wychowawca.id_wychowawcy = klasa.id_wychowawcy
+JOIN uczniowie ON klasa.id_klasy = uczniowie.id_klasy
+ORDER BY uczniowie.id_klasy, uczniowie.nazwisko ASC;

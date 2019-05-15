@@ -1,0 +1,7 @@
+SELECT imiê, nazwisko, pensja, stanowisko
+FROM pracownicy
+WHERE nazwisko IN
+(SELECT nazwisko
+FROM pracownicy
+GROUP BY nazwisko
+HAVING COUNT(nazwisko) >= 2);

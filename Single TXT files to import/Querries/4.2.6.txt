@@ -1,0 +1,47 @@
+SELECT COUNT(id_ucznia) AS urodzenia_sty
+FROM uczniowie
+WHERE data_urodzenia REGEXP '.-01-.';
+
+SELECT COUNT(id_ucznia) AS urodzenia_lut
+FROM uczniowie
+WHERE data_urodzenia REGEXP '.-02-.';
+
+SELECT COUNT(id_ucznia) AS urodzenia_mar
+FROM uczniowie
+WHERE data_urodzenia REGEXP '.-03-.';
+
+SELECT COUNT(id_ucznia) AS urodzenia_kwi
+FROM uczniowie
+WHERE data_urodzenia REGEXP '.-04-.';
+
+SELECT COUNT(id_ucznia) AS urodzenia_maj
+FROM uczniowie
+WHERE data_urodzenia REGEXP '.-05-.';
+
+SELECT COUNT(id_ucznia) AS urodzenia_cze
+FROM uczniowie
+WHERE data_urodzenia REGEXP '.-06-.';
+
+SELECT COUNT(id_ucznia) AS urodzenia_lip
+FROM uczniowie
+WHERE data_urodzenia REGEXP '.-07-.';
+
+SELECT COUNT(id_ucznia) AS urodzenia_sie
+FROM uczniowie
+WHERE data_urodzenia REGEXP '.-08-.';
+
+SELECT COUNT(id_ucznia) AS urodzenia_wrz
+FROM uczniowie
+WHERE data_urodzenia REGEXP '.-09-.';
+
+SELECT COUNT(id_ucznia) AS urodzenia_paü
+FROM uczniowie
+WHERE data_urodzenia REGEXP '.-10-.';
+
+SELECT COUNT(id_ucznia) AS urodzenia_lis
+FROM uczniowie
+WHERE data_urodzenia REGEXP '.-11-.';
+
+SELECT COUNT(id_ucznia) AS urodzenia_gru
+FROM uczniowie
+WHERE data_urodzenia REGEXP '.-12-.';

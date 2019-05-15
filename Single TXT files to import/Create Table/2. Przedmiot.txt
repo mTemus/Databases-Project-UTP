@@ -1,0 +1,7 @@
+CREATE TABLE `przedmiot` (
+  `id_przedmiotu` int(11) NOT NULL AUTO_INCREMENT,
+  `nazwa` varchar(45) NOT NULL,
+  `godzin_tygodniowo` int(11) NOT NULL,
+  PRIMARY KEY (`id_przedmiotu`),
+  UNIQUE KEY `id_przedmiotu_UNIQUE` (`id_przedmiotu`)
+)

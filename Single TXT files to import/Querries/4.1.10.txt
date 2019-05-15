@@ -1,0 +1,10 @@
+SELECT COUNT(op³aty.id_ucznia) AS iloœæ_wp³at, uczniowie.id_klasy AS numer_klasy
+FROM op³aty
+INNER JOIN uczniowie ON op³aty.id_ucznia = uczniowie.id_ucznia
+WHERE typ_op³aty LIKE 'Kino'
+GROUP BY id_klasy
+ORDER BY id_klasy ASC;
+
+SELECT COUNT(id_ucznia) AS 'Iloœæ wszystkich wp³at na kino'
+FROM op³aty
+WHERE typ_op³aty LIKE 'Kino';

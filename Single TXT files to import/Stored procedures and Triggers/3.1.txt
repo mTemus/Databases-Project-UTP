@@ -1,0 +1,39 @@
+DROP FUNCTION IF EXISTS dodatek_f;
+DELIMITER $$
+	CREATE FUNCTION dodatek_f(wychowane_klasy INT) RETURNS INT(11)
+	BEGIN
+		DECLARE dodatek INT;
+		IF (wychowane_klasy = 1) THEN
+			SET dodatek = 100;
+		ELSEIF (wychowane_klasy = 2) THEN
+			SET dodatek = 200;
+		ELSEIF (wychowane_klasy = 3) THEN
+			SET dodatek = 300;
+		ELSEIF (wychowane_klasy = 4) THEN
+			SET dodatek = 400;
+		ELSEIF (wychowane_klasy >= 5) THEN
+			SET dodatek = 500;
+		END IF;
+RETURN dodatek;
+END $$
+DELIMITER ;
+
+DROP TRIGGER IF EXISTS dodatek_u;
+DELIMITER $$
+  CREATE TRIGGER dodatek_u
+    BEFORE UPDATE ON wychowawca
+    FOR EACH ROW BEGIN
+        SET NEW.dodatek_wychowawczy = (SELECT dodatek_f(NEW.wychowane_klasy));
+    END;
+$$
+DELIMITER ;
+
+DROP TRIGGER IF EXISTS dodatek_i;
+DELIMITER $$
+  CREATE TRIGGER dodatek_i
+    BEFORE INSERT ON wychowawca
+    FOR EACH ROW BEGIN
+        SET NEW.dodatek_wychowawczy = (SELECT dodatek_f(NEW.wychowane_klasy));
+    END;
+$$
+DELIMITER ;

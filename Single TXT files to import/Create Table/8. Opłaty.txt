@@ -1,0 +1,8 @@
+CREATE TABLE `op³aty` (
+  `id_ucznia` int(11) NOT NULL,
+  `typ_op³aty` varchar(45) NOT NULL,
+  `wielkoœæ_op³aty` int(11) NOT NULL,
+  PRIMARY KEY (`id_ucznia`,`typ_op³aty`),
+  KEY `opla_uczn_idx` (`id_ucznia`),
+  CONSTRAINT `opla_uczn` FOREIGN KEY (`id_ucznia`) REFERENCES `uczniowie` (`id_ucznia`)
+)

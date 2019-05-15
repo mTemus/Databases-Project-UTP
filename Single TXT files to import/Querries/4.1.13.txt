@@ -1,0 +1,3 @@
+SELECT imiê, nazwisko, id_klasy AS numer_klasy
+FROM uczniowie
+WHERE imiê LIKE 'M%' AND nazwisko LIKE 'W%' OR imiê LIKE 'W%' AND nazwisko LIKE 'M%';

@@ -1,0 +1,4 @@
+SELECT imiê, nazwisko, pensja, stanowisko
+FROM szkola.pracownicy
+GROUP BY pensja
+HAVING pensja > 2700 AND stanowisko LIKE 'Nauczyciel%';

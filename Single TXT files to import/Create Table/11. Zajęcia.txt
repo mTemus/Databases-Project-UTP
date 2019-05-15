@@ -1,0 +1,14 @@
+CREATE TABLE `zajêcia` (
+  `id_zajêæ` int(11) NOT NULL AUTO_INCREMENT,
+  `id_przedmiotu` int(11) NOT NULL,
+  `id_sali` int(11) NOT NULL,
+  `id_klasy` int(11) NOT NULL,
+  PRIMARY KEY (`id_zajêæ`),
+  UNIQUE KEY `id_zajêæ_UNIQUE` (`id_zajêæ`),
+  KEY `zaje_prze_idx` (`id_przedmiotu`),
+  KEY `zaje_sala_idx` (`id_sali`),
+  KEY `zaje_klas_idx` (`id_klasy`),
+  CONSTRAINT `zaje_klas` FOREIGN KEY (`id_klasy`) REFERENCES `klasa` (`id_klasy`),
+  CONSTRAINT `zaje_prze` FOREIGN KEY (`id_przedmiotu`) REFERENCES `przedmiot` (`id_przedmiotu`),
+  CONSTRAINT `zaje_sala` FOREIGN KEY (`id_sali`) REFERENCES `sala` (`id_sali`)
+)

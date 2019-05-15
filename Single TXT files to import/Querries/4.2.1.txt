@@ -1,0 +1,4 @@
+SELECT nauczyciele.id_nauczyciela, pracownicy.imiê, pracownicy.nazwisko, pracownicy.pensja
+FROM szkola.nauczyciele LEFT OUTER JOIN szkola.pracownicy
+ON nauczyciele.id_pracownika = pracownicy.id_pracownika
+ORDER BY pracownicy.pensja DESC;

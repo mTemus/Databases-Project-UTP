@@ -1,0 +1,5 @@
+CREATE TABLE `skarbnik` (
+  `id_ucznia` int(11) NOT NULL,
+  KEY `skar_uczn_idx` (`id_ucznia`),
+  CONSTRAINT `skar_uczn` FOREIGN KEY (`id_ucznia`) REFERENCES `uczniowie` (`id_ucznia`)
+)

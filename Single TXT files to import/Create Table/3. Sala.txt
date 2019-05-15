@@ -1,0 +1,8 @@
+CREATE TABLE `sala` (
+  `id_sali` int(11) NOT NULL AUTO_INCREMENT,
+  `nr_sali` int(11) NOT NULL,
+  `iloœæ_miejsc` int(11) NOT NULL,
+  `typ_sali` varchar(45) NOT NULL,
+  PRIMARY KEY (`id_sali`),
+  UNIQUE KEY `id_sali_UNIQUE` (`id_sali`)
+)

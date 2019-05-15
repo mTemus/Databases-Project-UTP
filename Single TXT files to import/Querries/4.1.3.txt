@@ -1,0 +1,13 @@
+SELECT DISTINCT pracownicy.imiê, pracownicy.nazwisko, sala.nr_sali
+FROM pracownicy
+INNER JOIN nauczyciele ON pracownicy.id_pracownika = nauczyciele.id_pracownika
+JOIN kadra ON nauczyciele.id_nauczyciela = kadra.id_nauczyciela
+JOIN przedmiot ON kadra.id_przedmiotu = przedmiot.id_przedmiotu
+JOIN zajêcia ON przedmiot.id_przedmiotu = zajêcia.id_przedmiotu
+JOIN sala ON zajêcia.id_sali = sala.id_sali
+WHERE nauczyciele.id_nauczyciela = ANY 
+ (
+SELECT id_nauczyciela
+FROM wychowawca
+)
+GROUP BY pracownicy.nazwisko;

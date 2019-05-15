@@ -1,0 +1,4 @@
+SELECT nazwisko, COUNT(nazwisko) AS 'iloœæ_nazwisk'
+FROM pracownicy
+GROUP BY nazwisko
+HAVING iloœæ_nazwisk > 1;

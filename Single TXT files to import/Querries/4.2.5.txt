@@ -1,0 +1,5 @@
+SELECT AVG(dziennik_ocen.ocena) AS œrednia_ocen, przedmiot.nazwa AS przedmiot
+FROM dziennik_ocen
+INNER JOIN przedmiot ON dziennik_ocen.id_przedmiotu = przedmiot.id_przedmiotu
+GROUP BY dziennik_ocen.id_przedmiotu
+ORDER BY œrednia_ocen DESC;

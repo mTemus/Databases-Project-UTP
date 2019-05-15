@@ -1,0 +1,51 @@
+INSERT INTO `uczniowie` VALUES 
+(1,'Marcin','Wójcik','1997-02-11','Mê¿czyzna',3,NULL),
+(2,'Sebastian','Kemnitz','1997-02-22','Mê¿czyzna',3,NULL),
+(3,'Jakub','Melkowski','1997-07-31','Mê¿czyzna',3,NULL),
+(4,'Stanis³aw','Rubaj','1997-11-17','Mê¿czyzna',3,NULL),
+(5,'£ukasz','Szadowski','1997-03-13','Mê¿czyzna',3,NULL),
+(6,'Paulina','Kieruj','1997-04-01','Kobieta',3,NULL),
+(7,'Mateusz','Majewski','1997-08-10','Mê¿czyzna',3,NULL),
+(8,'Krystian','Bursztyñski','1997-12-12','Mê¿czyzna',3,NULL),
+(9,'Mariusz','Sanitariusz','1999-05-11','Mê¿czyzna',1,NULL),
+(10,'Eryk','Daniel','1999-04-16','Mê¿czyzna',1,NULL),
+(11,'Zuzanna','Kopytko','1999-11-21','Kobieta',1,NULL),
+(12,'Pawe³','Garlicki','1999-02-28','Mê¿czyzna',1,NULL),
+(13,'Piotr','Stró¿ewski','1999-07-19','Mê¿czyzna',1,NULL),
+(14,'Marika','Majeranek','1999-10-02','Kobieta',1,NULL),
+(15,'Brajan','Kowalski','1999-05-01','Mê¿czyzna',1,NULL),
+(16,'Joanna','Ibisz','1999-06-26','Kobieta',1,NULL),
+(17,'Martyna','Zab³odzka','1998-07-27','Kobieta',2,NULL),
+(18,'Kasia','Jurny','1998-01-01','Kobieta',2,NULL),
+(19,'Olgierd','Skurzyñski','1998-12-05','Mê¿czyzna',2,NULL),
+(20,'Patryk','Nijaki','1998-11-24','Mê¿czyzna',2,NULL),
+(21,'Norbert','Gierczak','1998-01-01','Mê¿czyzna',2,NULL),
+(22,'Wojciech','Marudny','1998-03-30','Mê¿czyzna',2,NULL),
+(23,'Natalia','Baczyñska','1998-04-01','Kobieta',2,NULL),
+(24,'Hubert','W³óczynoga','1998-02-14','Mê¿czyzna',2,NULL);
+
+
+
+#nie mam pojêcia, dlaczego w tabeli pracownicy przeszed³ zwi¹zek unarny, a w tabeli uczniowie polecenie siê blokowa³o i trzeba zrobiæ update po dodaniu rekordów
+
+UPDATE `szkola_test`.`uczniowie` SET `id_przewodnicz¹cego` = '1' WHERE (`id_ucznia` = '2');
+UPDATE `szkola_test`.`uczniowie` SET `id_przewodnicz¹cego` = '1' WHERE (`id_ucznia` = '3');
+UPDATE `szkola_test`.`uczniowie` SET `id_przewodnicz¹cego` = '1' WHERE (`id_ucznia` = '4');
+UPDATE `szkola_test`.`uczniowie` SET `id_przewodnicz¹cego` = '1' WHERE (`id_ucznia` = '5');
+UPDATE `szkola_test`.`uczniowie` SET `id_przewodnicz¹cego` = '1' WHERE (`id_ucznia` = '6');
+UPDATE `szkola_test`.`uczniowie` SET `id_przewodnicz¹cego` = '1' WHERE (`id_ucznia` = '7');
+UPDATE `szkola_test`.`uczniowie` SET `id_przewodnicz¹cego` = '1' WHERE (`id_ucznia` = '8');
+UPDATE `szkola_test`.`uczniowie` SET `id_przewodnicz¹cego` = '12' WHERE (`id_ucznia` = '9');
+UPDATE `szkola_test`.`uczniowie` SET `id_przewodnicz¹cego` = '12' WHERE (`id_ucznia` = '10');
+UPDATE `szkola_test`.`uczniowie` SET `id_przewodnicz¹cego` = '12' WHERE (`id_ucznia` = '11');
+UPDATE `szkola_test`.`uczniowie` SET `id_przewodnicz¹cego` = '12' WHERE (`id_ucznia` = '13');
+UPDATE `szkola_test`.`uczniowie` SET `id_przewodnicz¹cego` = '12' WHERE (`id_ucznia` = '14');
+UPDATE `szkola_test`.`uczniowie` SET `id_przewodnicz¹cego` = '12' WHERE (`id_ucznia` = '15');
+UPDATE `szkola_test`.`uczniowie` SET `id_przewodnicz¹cego` = '12' WHERE (`id_ucznia` = '16');
+UPDATE `szkola_test`.`uczniowie` SET `id_przewodnicz¹cego` = '20' WHERE (`id_ucznia` = '17');
+UPDATE `szkola_test`.`uczniowie` SET `id_przewodnicz¹cego` = '20' WHERE (`id_ucznia` = '18');
+UPDATE `szkola_test`.`uczniowie` SET `id_przewodnicz¹cego` = '20' WHERE (`id_ucznia` = '19');
+UPDATE `szkola_test`.`uczniowie` SET `id_przewodnicz¹cego` = '20' WHERE (`id_ucznia` = '21');
+UPDATE `szkola_test`.`uczniowie` SET `id_przewodnicz¹cego` = '20' WHERE (`id_ucznia` = '22');
+UPDATE `szkola_test`.`uczniowie` SET `id_przewodnicz¹cego` = '20' WHERE (`id_ucznia` = '23');
+UPDATE `szkola_test`.`uczniowie` SET `id_przewodnicz¹cego` = '20' WHERE (`id_ucznia` = '24');

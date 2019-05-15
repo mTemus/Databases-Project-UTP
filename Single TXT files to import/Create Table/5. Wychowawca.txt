@@ -1,0 +1,10 @@
+CREATE TABLE `wychowawca` (
+  `id_wychowawcy` int(11) NOT NULL AUTO_INCREMENT,
+  `id_nauczyciela` int(11) NOT NULL,
+  `dodatek_wychowawczy` int(11) DEFAULT NULL,
+  `wychowane_klasy` int(11) NOT NULL,
+  PRIMARY KEY (`id_wychowawcy`),
+  UNIQUE KEY `id_wychowawcy_UNIQUE` (`id_wychowawcy`),
+  KEY `wych_nauc_idx` (`id_nauczyciela`),
+  CONSTRAINT `wych_nauc` FOREIGN KEY (`id_nauczyciela`) REFERENCES `nauczyciele` (`id_nauczyciela`)
+)

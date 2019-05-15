@@ -1,0 +1,5 @@
+SELECT nauczyciele.id_nauczyciela, wychowawca.id_wychowawcy, pracownicy.imiê, pracownicy.nazwisko
+FROM nauczyciele
+INNER JOIN pracownicy ON nauczyciele.id_pracownika = pracownicy.id_pracownika
+JOIN wychowawca ON nauczyciele.id_nauczyciela = wychowawca.id_nauczyciela
+WHERE nauczyciele.id_nauczyciela != ALL (SELECT id_nauczyciela FROM zastêpstwa);

@@ -1,0 +1,1 @@
+INSERT INTO `skarbnik` VALUES (5),(11),(17);

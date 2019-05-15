@@ -1,0 +1,15 @@
+CREATE TABLE `uczniowie` (
+  `id_ucznia` int(11) NOT NULL AUTO_INCREMENT,
+  `imiê` varchar(45) NOT NULL,
+  `nazwisko` varchar(45) NOT NULL,
+  `data_urodzenia` date NOT NULL,
+  `p³eæ` varchar(45) NOT NULL,
+  `id_klasy` int(11) NOT NULL,
+  `id_przewodnicz¹cego` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id_ucznia`),
+  UNIQUE KEY `id_ucznia_UNIQUE` (`id_ucznia`),
+  KEY `uczn_klas_idx` (`id_klasy`),
+  KEY `uczn_uczn_idx` (`id_przewodnicz¹cego`),
+  CONSTRAINT `uczn_klas` FOREIGN KEY (`id_klasy`) REFERENCES `klasa` (`id_klasy`),
+  CONSTRAINT `uczn_uczn` FOREIGN KEY (`id_przewodnicz¹cego`) REFERENCES `uczniowie` (`id_ucznia`)
+)

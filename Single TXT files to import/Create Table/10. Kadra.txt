@@ -1,0 +1,11 @@
+CREATE TABLE `kadra` (
+  `id_kadry` int(11) NOT NULL AUTO_INCREMENT,
+  `id_nauczyciela` int(11) NOT NULL,
+  `id_przedmiotu` int(11) NOT NULL,
+  PRIMARY KEY (`id_kadry`),
+  UNIQUE KEY `id_kadry_UNIQUE` (`id_kadry`),
+  KEY `kadr_nauc_idx` (`id_nauczyciela`),
+  KEY `kadr_przedm_idx` (`id_przedmiotu`),
+  CONSTRAINT `kadr_nauc` FOREIGN KEY (`id_nauczyciela`) REFERENCES `nauczyciele` (`id_nauczyciela`),
+  CONSTRAINT `kadr_przed` FOREIGN KEY (`id_przedmiotu`) REFERENCES `przedmiot` (`id_przedmiotu`)
+)

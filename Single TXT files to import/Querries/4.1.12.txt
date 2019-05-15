@@ -1,0 +1,4 @@
+SELECT p³eæ, count(p³eæ) AS liczba, id_klasy
+FROM uczniowie
+GROUP BY p³eæ, id_klasy
+ORDER BY id_klasy ASC;

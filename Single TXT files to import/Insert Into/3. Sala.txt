@@ -1,0 +1,1 @@
+INSERT INTO `sala` VALUES (1,1,16,'Matematyczna'),(2,5,9,'Zwyk³a'),(3,6,10,'Zwyk³a'),(4,8,16,'Plastyczna'),(5,10,10,'Zwyk³a'),(6,11,10,'Biologiczna'),(7,12,16,'Matematyczna'),(8,13,10,'Biologiczna'),(9,15,10,'Geograficzna'),(10,16,16,'Plastyczna'),(11,18,13,'Jêzykowa'),(12,19,9,'Zwyk³a'),(13,20,8,'Informatyczna'),(14,24,14,'Jêzykowa'),(15,30,20,'Sala_sportowa');

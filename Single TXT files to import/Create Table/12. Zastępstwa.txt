@@ -1,0 +1,11 @@
+CREATE TABLE `zastêpstwa` (
+  `id_zastêpstwa` int(11) NOT NULL AUTO_INCREMENT,
+  `id_nauczyciela` int(11) DEFAULT NULL,
+  `id_przedmiotu` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id_zastêpstwa`),
+  UNIQUE KEY `id_zastêpstwa_UNIQUE` (`id_zastêpstwa`),
+  KEY `zast_nauc_idx` (`id_nauczyciela`),
+  KEY `zast_przed_idx` (`id_przedmiotu`),
+  CONSTRAINT `zast_nauc` FOREIGN KEY (`id_nauczyciela`) REFERENCES `nauczyciele` (`id_nauczyciela`),
+  CONSTRAINT `zast_przed` FOREIGN KEY (`id_przedmiotu`) REFERENCES `przedmiot` (`id_przedmiotu`)
+)

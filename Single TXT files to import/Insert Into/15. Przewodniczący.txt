@@ -1,0 +1,1 @@
+INSERT INTO `przewodnicz¹cy` VALUES (1),(12),(20);

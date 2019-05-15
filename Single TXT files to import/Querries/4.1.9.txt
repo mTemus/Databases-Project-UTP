@@ -1,0 +1,6 @@
+SELECT id_ucznia AS numer_ucznia, imiê, nazwisko,
+(SELECT SUM(wielkoœæ_op³aty)
+FROM szkola.op³aty as O
+WHERE O.id_ucznia = U.id_ucznia) AS SumaOp³at
+FROM szkola.uczniowie AS U
+ORDER BY numer_ucznia ASC;

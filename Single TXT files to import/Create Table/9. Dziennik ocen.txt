@@ -1,0 +1,11 @@
+CREATE TABLE `dziennik_ocen` (
+  `id_oceny` int(11) NOT NULL AUTO_INCREMENT,
+  `ocena` int(11) NOT NULL,
+  `id_ucznia` int(11) NOT NULL,
+  `id_przedmiotu` int(11) NOT NULL,
+  PRIMARY KEY (`id_oceny`),
+  KEY `dzie_uczn_idx` (`id_ucznia`),
+  KEY `dzie_prze_idx` (`id_przedmiotu`),
+  CONSTRAINT `dzie_prze` FOREIGN KEY (`id_przedmiotu`) REFERENCES `przedmiot` (`id_przedmiotu`),
+  CONSTRAINT `dzie_uczn` FOREIGN KEY (`id_ucznia`) REFERENCES `uczniowie` (`id_ucznia`)
+)

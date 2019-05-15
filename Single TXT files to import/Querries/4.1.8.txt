@@ -1,0 +1,8 @@
+SELECT imiê, nazwisko, id_ucznia AS numer_ucznia, id_klasy AS numer_klasy
+FROM uczniowie 
+WHERE uczniowie.id_ucznia NOT IN
+(
+SELECT id_ucznia
+FROM op³aty
+WHERE typ_op³aty LIKE 'Ubezpieczenie'
+);

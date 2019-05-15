@@ -1,0 +1,9 @@
+CREATE TABLE `nauczyciele` (
+  `id_nauczyciela` int(11) NOT NULL AUTO_INCREMENT,
+  `id_pracownika` int(11) NOT NULL,
+  `chorobowe` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`id_nauczyciela`),
+  UNIQUE KEY `id_nauczyciela_UNIQUE` (`id_nauczyciela`),
+  KEY `nauc_prac_idx` (`id_pracownika`),
+  CONSTRAINT `nauc_prac` FOREIGN KEY (`id_pracownika`) REFERENCES `pracownicy` (`id_pracownika`)
+)

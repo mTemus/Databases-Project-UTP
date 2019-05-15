@@ -1,0 +1,8 @@
+CREATE TABLE `klasa` (
+  `id_klasy` int(11) NOT NULL AUTO_INCREMENT,
+  `id_wychowawcy` int(11) NOT NULL,
+  `rocznik` int(11) NOT NULL,
+  PRIMARY KEY (`id_klasy`),
+  KEY `klas_wych_idx` (`id_wychowawcy`),
+  CONSTRAINT `klas_wych` FOREIGN KEY (`id_wychowawcy`) REFERENCES `wychowawca` (`id_wychowawcy`)
+)
